@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+
+html{
+    overflow-y: scroll;
+}
+
+h1{
+  margin-top: 10%;
+  margin-left: 25%;
+}
+
+.container1{
+  background-color: rgba(0, 0, 0, 0);
+ 
+}
+
+#lab1{
+  margin:0.5%
+}
+#lab2{
+  margin:0.5%
+}
+#inv_amt{
+margin-left: 0.5%;
+}
+
+.customSelect{
+  margin-left: 0.5%;
+}
+
+.form-group{
+margin-left: 32%;
+/* width: 200%; */
+
+}
+
+
+
+.parallax {
+    /* The image used */
+    background-image: url("../img/background.jpg");
+
+    min-height: 900px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.intro{
+  font-family:'Avenir Next Condensed';
+  color: #fff;
+font-size:26px; position: absolute;
+width: 100%;
+height: 800px;
+}
+
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background: #007bb5;
+  color: white;
+  border-radius: 50%
+}
+
+.fa-envelope {
+  background: #007bb5;
+  color: white;
+  border-radius: 50%
+}
+
+.fa {
+  padding: 20px;
+  font-size: 40px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 40%;
+}
+
+* {
+overflow: hidden;  
+margin: 0;
+padding: 0;
+}
+
+
+.last{
+  background-image: url("../img/last.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  height: 720px;
+  background-color: #555F80;
+  background-opacity:0.2;
+  color: #242837;
+}
+
+

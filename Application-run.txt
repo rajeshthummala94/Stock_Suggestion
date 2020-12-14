@@ -1,0 +1,6 @@
+
+1)Install all the dependencies in the "requirements.txt" file.
+
+2)run application using "python stock-suggestion-app.py" from terminal.
+
+3) Visit "localhost:5000" in any browser.

@@ -1,0 +1,94 @@
+<!-- HTML template for Stock Portfolio Suggestion Report -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <br><br>
+    <title>Strategy Investment Report</title>
+    <link rel="stylesheet" type="text/css" href="../static/stylesheets/report.css">
+</head>
+
+<body>
+    <br>
+    <h1 style="margin: 10px;text-align: center;">Stock Investment Suggestion Report</h1>
+    <!-- Investment Strategy 1 -->
+    <div style="margin-left: 0%">
+        <h3 style="text-align: center;">Strategy 1: {{strategy1}}</h3> <br>
+
+        <!-- Stock 1 -->
+        <div class="stock1" style="float:left; margin-left: 3%; padding: 0.5%; width:30%; background:#7bd4a9;">
+            <p>Stock 1: {{stock_name1[0]}}</p>
+            <p>Investment Amount Suggestion: ${{amt1}}</p>
+            <p>Current Price: ${{current_price1[0]}}</p>
+            <p>Previous week trend: {{last_five1[0]}}</p>
+        </div>
+
+        <!-- Stock 2 -->
+        <div style="float:left; width:30%; margin-left: 2%; padding: 0.5%; background:#7bd4a9;" class="stock2">
+            <p>Stock 2: {{stock_name1[1]}}</p>
+            <p>Investment Amount Suggestion: ${{amt2}}</p>
+            <p>Current Price: ${{current_price1[1]}}</p>
+            <p>Previous week trend: {{last_five1[1]}}</p>
+        </div>
+
+        <!-- Stock 3 -->
+        <div style="float:left; width:30%; margin-left: 2%; padding: 0.5%; background:#7bd4a9;" class="stock3">
+            <p>Stock 3: {{stock_name1[2]}}</p>
+            <p>Investment Amount Suggestion: ${{amt3}}</p>
+            <p>Current Price: ${{current_price1[2]}}</p>
+            <p>Previous week trend: {{last_five1[2]}}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div style=" margin-top: 15%; margin-left: 0%">
+        <!-- Investment Strategy 2 -->
+        <h3 style="text-align: center;">Strategy 2: {{strategy2}}</h3>
+
+        <br>
+
+        <!-- Stock 1 -->
+        <div class="stock4" style="float:left; margin-left: 3%; padding: 0.5%; width:30%; background:#7bd4a9;"">
+            <p>Stock 1: {{stock_name2[0]}}</p>
+            <p>Investment Amount Suggestion: ${{amt1}}</p>
+            <p>Current Price: ${{current_price2[0]}}</p>
+            <p>Previous week trend: {{last_five2[0]}}</p>
+        </div>
+
+
+        <!-- Stock 2 -->
+        <div style=" float:left; width:30%; margin-left: 2%; padding: 0.5%; background:#7bd4a9;" class="stock5">
+            <p>Stock 2: {{stock_name2[1]}}</p>
+            <p>Investment Amount Suggestion: ${{amt2}}</p>
+            <p>Current Price: ${{current_price2[1]}}</p>
+            <p>Previous week trend: {{last_five2[1]}}</p>
+        </div>
+
+
+        <!-- Stock 3 -->
+        <div style="float:left; width:30%; margin-left: 2%; padding: 0.5%; background:#7bd4a9;" class="stock6">
+            <p>Stock 3: {{stock_name2[2]}}</p>
+            <p>Investment Amount Suggestion: ${{amt3}}</p>
+            <p>Current Price: ${{current_price2[2]}}</p>
+            <p>Previous week trend: {{last_five2[2]}}</p>
+        </div>
+
+    </div>
+
+    <!-- Javascript to display second investment strategy is one was specified -->
+    <script>
+        var check = {{ two_strategies }};
+        if (check == 1) {
+            document.getElementById("second_strategy").style.visibility = "visible";
+        }
+    </script>
+
+</body>
+
+</html>

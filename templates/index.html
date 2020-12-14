@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Stock Portfolio Suggestion Engine</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+    <div style="height:800px;font-size:26px; position: absolute; " class="intro">
+        <!-- Introduction -->
+        <h1>Stock Portfolio Suggestion Engine</h1>
+        <br>
+        <br>
+        <!-- Form Object [ action="/submit" when form is submitted - POST request ] -->
+        <form method="POST" action="/submit">
+            <div class="form-group">
+
+                <label for="inv_amt">Enter your Investment Amount (in $): </label>
+                <input type="number" id="inv_amt" name="inv_amt" placeholder="0.00" min="5000" max="100000000"
+                    style="margin-left: 0.5%" required><br>
+
+                <br>
+
+                <label id="lab1">Choose investment Strategy 1:</label>
+                <select id="str1" class="customSelect" name="strategy1" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="Ethical Investing">Ethical Investing</option>
+                    <option value="Growth Investing">Growth Investing</option>
+                    <option value="Index Investing">Index Investing</option>
+                    <option value="Quality Investing">Quality Investing</option>
+                    <option value="Value Investing">Value Investing</option>
+                </select>
+                <br>
+                <br>
+                <label id="lab2">Choose investment Strategy 2:</label>
+                <select id="str2" class="customSelect" name="strategy2" required>
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="Ethical Investing">Ethical Investing</option>
+                    <option value="Growth Investing">Growth Investing</option>
+                    <option value="Index Investing">Index Investing</option>
+                    <option value="Quality Investing">Quality Investing</option>
+                    <option value="Value Investing">Value Investing</option>
+                    <option value="None">N/A</option>
+                </select>
+
+            </div>
+
+            <!-- Bootstrap Submit Button -->
+            <input type="submit" value="Submit" onclick="verify()"
+                style="margin-left: 45%; margin-top: 3%; padding: 10px 15px; background-color: #3cc918; color: white; font-size: 20px;">
+
+
+        </form>
+    </div>
+    <div class="parallax"></div>
+
+
+
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script>
+        verify = () => {
+            console.log("in verify");
+            let st1 = document.getElementById("str1").value
+            let st2 = document.getElementById("str2").value
+            console.log(st1, st2);
+            if (st1 == st2) {
+                alert("Choose two different investment strategies")
+            }
+        }
+
+    </script>
+</body>
+
+</html>
